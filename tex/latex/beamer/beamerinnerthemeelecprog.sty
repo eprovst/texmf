@@ -1,0 +1,41 @@
+%%%%%%%%%
+% Theme %
+%%%%%%%%%
+
+% Add space between paragraphs
+\setlength{\parskip}{3ex minus 3ex}
+
+% Itemize
+\RequirePackage{enumitem}
+
+\setlist[1]{itemsep=\parskip}
+\setlist{itemsep={0.5ex minus 0.5ex}}
+
+\newcommand{\nicebullet}{\raise1.25pt\hbox{\donotcoloroutermaths$\bullet$}}
+\setlist[itemize]{label=\nicebullet}
+
+% Caption
+\RequirePackage{caption}
+\captionsetup{labelformat=empty}
+\setlength{\abovecaptionskip}{1.5ex}
+\setlength{\belowcaptionskip}{0pt}
+\setbeamerfont{caption}{size=\footnotesize}
+
+% Title page
+\RequirePackage{calc}
+
+\setbeamerfont{title page title}{size=\huge,series=\bfseries}
+\setbeamerfont{title page author}{size=\normalsize}
+\setbeamerfont{title page institute}{size=\footnotesize}
+
+\setbeamertemplate{title page} {%
+  \begin{minipage}[b][\beamer@paperheight]{\textwidth}%
+    \raggedright{}
+    {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\inserttitle\par}%
+    \vspace{-.2ex}
+    \rule{\widthof{\insertauthor} * \real{1.6}}{1pt}\par
+    {\usebeamerfont{title page author}\usebeamercolor[fg]{title page}\insertauthor\par}%
+    {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\par}%
+    \vspace{\beamer@leftmargin}%
+  \end{minipage}%
+}

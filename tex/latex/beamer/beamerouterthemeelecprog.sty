@@ -1,0 +1,35 @@
+%%%%%%%%%
+% Theme %
+%%%%%%%%%
+
+% Navigation
+\beamertemplatenavigationsymbolsempty
+
+% Footer
+\setbeamertemplate{footline} {%
+  \begin{beamercolorbox}[wd=\pagewidth,ht=2em]{background}
+  \end{beamercolorbox}
+}
+
+\DeclareOptionBeamer{number} {
+  \setbeamertemplate{footline} {%
+    \begin{beamercolorbox}[wd=\pagewidth,ht=2em]{footline}
+      \hfill%
+      \usebeamercolor[fg]{page number in head/foot}%
+      \usebeamerfont{page number in head/foot}%
+      \insertframenumber\kern.5em\vskip.5em%
+    \end{beamercolorbox}
+  }
+}
+\ProcessOptionsBeamer
+
+% Frame title
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+
+\setbeamertemplate{frametitle} {%
+  \vspace*{-3pt}% HACK
+  \begin{beamercolorbox}[wd=\pagewidth,ht=2em]{frametitle}
+    \vspace{.5em}%
+    {\hspace{.5em}\usebeamerfont{frametitle}\insertframetitle}
+  \end{beamercolorbox}%
+}

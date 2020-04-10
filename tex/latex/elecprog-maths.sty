@@ -1,0 +1,32 @@
+%% Utils when writing mathematics.
+%% Collected by Evert 'elecprog' Provoost
+
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{elecprog-maths}
+  [2020/04/10 elecprog's maths preamble]
+
+% Basic packages
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{amssymb}
+\RequirePackage{amsfonts}
+\RequirePackage{mathtools}
+\RequirePackage{physics}
+
+% Symbols
+\newcommand{\newmsymb}[2]{%
+  \newcommand{#1}{\ensuremath{#2}}}
+
+% Number sets
+\newmsymb{\NN}{\mathbb{N}}
+\newmsymb{\ZZ}{\mathbb{Z}}
+\newmsymb{\QQ}{\mathbb{Q}}
+\newmsymb{\RR}{\mathbb{R}}
+\newmsymb{\CC}{\mathbb{C}}
+
+% Operators
+\newmsymb{\FO}{\mathcal{F}}
+\newmsymb{\GO}{\mathcal{G}}
+\newmsymb{\HO}{\mathcal{H}}
+\newmsymb{\KO}{\mathcal{K}}
+\newmsymb{\LO}{\mathcal{L}}

@@ -1,0 +1,26 @@
+%%%%%%%%%
+% Theme %
+%%%%%%%%%
+
+\mode<presentation>
+
+\DeclareOption{number}{%
+  \PassOptionsToPackage{number}{beamerouterthemeelecprog}
+}
+\DeclareOption{inverted}{%
+  \PassOptionsToPackage{inverted}{beamercolorthemeelecprog}
+}
+\ProcessOptions
+
+% Requirement
+\RequirePackage{tikz}
+
+% Settings
+\useinnertheme{elecprog}
+\useoutertheme{elecprog}
+\usecolortheme{elecprog}
+
+% Navigation
+\setbeamertemplate{navigation symbols}{}
+
+\mode<all>

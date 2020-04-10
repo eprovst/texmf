@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%
+% Custom colors %
+%%%%%%%%%%%%%%%%%
+
+\definecolor{epwhite}{RGB}{236,236,236}
+\definecolor{epgray}{RGB}{128,128,128}
+\definecolor{epblack}{RGB}{16,16,16}
+
+\definecolor{epred}{RGB}{255,102,115}
+\definecolor{epgreen}{RGB}{102,255,138}
+\definecolor{epblue}{RGB}{142,158,255}
+\definecolor{eporange}{RGB}{255,222,115}
+
+\colorlet{epfg}{epblack}
+\colorlet{epbg}{epwhite}
+\colorlet{epaccent}{epgray}
+
+\DeclareOptionBeamer{inverted}{%
+  \colorlet{epfg}{epwhite}
+  \colorlet{epbg}{epblack}
+  \colorlet{epaccent}{epgray}
+}
+\ProcessOptionsBeamer
+
+
+%%%%%%%%%
+% Basic %
+%%%%%%%%%
+
+\setbeamercolor*{normal text}{fg=epfg,bg=epbg}
+\setbeamercolor*{alerted text}{fg=epred,bg=epbg}
+\setbeamerfont{alerted text}{series=\bfseries}
+
+
+%%%%%%%%%%%
+% Palette %
+%%%%%%%%%%%
+
+\setbeamercolor*{palette primary}{fg=epfg,bg=epbg}
+\setbeamercolor*{palette secondary}{fg=epfg,bg=epbg}
+\setbeamercolor*{palette tertiary}{fg=epbg,bg=epfg}
+\setbeamercolor*{palette quaternary}{fg=epfg,bg=epbg}
+
+
+%%%%%%%%%%%%%
+% Structure %
+%%%%%%%%%%%%%
+
+\setbeamercolor{structure}{fg=epaccent}
+\setbeamercolor{item}{fg=epfg}
+\setbeamercolor{page number in head/foot}{fg=epaccent}
+\setbeamercolor{frametitle}{fg=epfg}
+
+
+%%%%%%%%%
+% Block %
+%%%%%%%%%
+
+\setbeamerfont{block title}{series=\mdseries}
+\setbeamercolor{block title}{fg=epbg, bg=epgray!75!epfg}
+\setbeamercolor{block body}{fg=epfg, bg=epgray!45!epbg}
+
+\setbeamerfont{block title alerted}{series=\mdseries}
+\setbeamercolor{block title alerted}{fg=epbg, bg=epred!75!epfg}
+\setbeamercolor{block body alerted}{fg=epfg, bg=epred!45!epbg}
+
+\setbeamerfont{block title example}{series=\mdseries}
+\setbeamercolor{block title example}{fg=epbg, bg=epgreen!75!epfg}
+\setbeamercolor{block body example}{fg=epfg, bg=epgreen!45!epbg}
