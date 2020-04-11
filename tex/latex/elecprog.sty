@@ -3,10 +3,7 @@
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{elecprog}
-  [2020/04/10 elecprog's preamble]
-
-% Use my maths collection
-\RequirePackage{elecprog-maths}
+  [2020/04/12 elecprog's preamble]
 
 % Basic things
 \RequirePackage[utf8]{inputenc}
@@ -14,11 +11,22 @@
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{microtype}
 
-% Language should be set at documentclass level
-\RequirePackage{babel}
+% Use my maths collection
+\RequirePackage{elecprog-maths}
 
 % Nicer paper writing
 \RequirePackage{graphicx}
+\RequirePackage{pgfplots}
 \RequirePackage{booktabs}
+\RequirePackage{url}
+\RequirePackage{xcolor}
+\RequirePackage{float}
 \RequirePackage{cleveref}
+\RequirePackage{csquotes}
+
+% Science
 \RequirePackage{listings}
+\RequirePackage{siunitx}
+
+% Babel comes last
+\RequirePackage{babel}
