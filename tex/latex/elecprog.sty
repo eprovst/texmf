@@ -27,6 +27,9 @@
 % Science
 \RequirePackage{listings}
 \RequirePackage{siunitx}
+\DeclareOption{dutch}{\sisetup{locale=FR,exponent-product=\cdot}}
+\ProcessOptions
 
 % Babel comes last
 \RequirePackage{babel}
+
