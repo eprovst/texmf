@@ -7,13 +7,13 @@
 
 % Footer
 \setbeamertemplate{footline} {%
-  \begin{beamercolorbox}[wd=\pagewidth,ht=2em]{background}
+  \begin{beamercolorbox}[wd=\beamer@paperwidth,ht=2em]{background}
   \end{beamercolorbox}
 }
 
 \DeclareOptionBeamer{number} {
   \setbeamertemplate{footline} {%
-    \begin{beamercolorbox}[wd=\pagewidth,ht=2em]{footline}
+    \begin{beamercolorbox}[wd=\beamer@paperwidth,ht=2em]{footline}
       \hfill%
       \usebeamercolor[fg]{page number in head/foot}%
       \usebeamerfont{page number in head/foot}%
@@ -28,7 +28,7 @@
 
 \setbeamertemplate{frametitle} {%
   \vspace*{-3pt}% HACK
-  \begin{beamercolorbox}[wd=\pagewidth,ht=2em]{frametitle}
+  \begin{beamercolorbox}[wd=\beamer@paperwidth,ht=2em]{frametitle}
     \vspace{.5em}%
     {\hspace{.5em}\usebeamerfont{frametitle}\insertframetitle}
   \end{beamercolorbox}%

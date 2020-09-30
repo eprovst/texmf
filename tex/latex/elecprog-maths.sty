@@ -35,104 +35,108 @@
 \newmsymb{\KO}{\mathcal{K}}
 \newmsymb{\LO}{\mathcal{L}}
 
-\newcommand{\GetThmTranslation}[1]{\noexpand\GetTranslation{#1}}
+\ifcsname theorem\endcsname
+  % Beamer, don't redefine
+\else
+  \newcommand{\GetThmTranslation}[1]{\noexpand\GetTranslation{#1}}
 
-% Theorem environments
-\theoremstyle{plain}
-\newtheorem{theorem}{\GetThmTranslation{theorem}}
-\newtheorem{lemma}[theorem]{\GetThmTranslation{lemma}}
-\newtheorem{corollary}{\GetThmTranslation{corollary}}[theorem]
-\newtheorem{proposition}[theorem]{\GetThmTranslation{proposition}}
-\newtheorem{conjecture}[theorem]{\GetThmTranslation{conjecture}}
-\newtheorem{criterion}[theorem]{\GetThmTranslation{criterion}}
-\newtheorem{assertion}[theorem]{\GetThmTranslation{assertion}}
+  % Theorem environments
+  \theoremstyle{plain}
+  \newtheorem{theorem}{\GetThmTranslation{theorem}}
+  \newtheorem{lemma}[theorem]{\GetThmTranslation{lemma}}
+  \newtheorem{corollary}{\GetThmTranslation{corollary}}[theorem]
+  \newtheorem{proposition}[theorem]{\GetThmTranslation{proposition}}
+  \newtheorem{conjecture}[theorem]{\GetThmTranslation{conjecture}}
+  \newtheorem{criterion}[theorem]{\GetThmTranslation{criterion}}
+  \newtheorem{assertion}[theorem]{\GetThmTranslation{assertion}}
 
-\theoremstyle{definition}
-\newtheorem{definition}{\GetThmTranslation{definition}}
-\newtheorem{condition}{\GetThmTranslation{condition}}
-\newtheorem{problem}{\GetThmTranslation{problem}}
-\newtheorem{example}{\GetThmTranslation{example}}
-\newtheorem{exercise}{\GetThmTranslation{exercise}}
-\newtheorem{algorithm}{\GetThmTranslation{algorithm}}
-\newtheorem{question}{\GetThmTranslation{question}}
-\newtheorem{axiom}{\GetThmTranslation{axiom}}
-\newtheorem{property}{\GetThmTranslation{property}}
-\newtheorem{assumption}{\GetThmTranslation{assumption}}
-\newtheorem{hypothesis}{\GetThmTranslation{hypothesis}}
+  \theoremstyle{definition}
+  \newtheorem{definition}{\GetThmTranslation{definition}}
+  \newtheorem{condition}{\GetThmTranslation{condition}}
+  \newtheorem{problem}{\GetThmTranslation{problem}}
+  \newtheorem{example}{\GetThmTranslation{example}}
+  \newtheorem{exercise}{\GetThmTranslation{exercise}}
+  \newtheorem{algorithm}{\GetThmTranslation{algorithm}}
+  \newtheorem{question}{\GetThmTranslation{question}}
+  \newtheorem{axiom}{\GetThmTranslation{axiom}}
+  \newtheorem{property}{\GetThmTranslation{property}}
+  \newtheorem{assumption}{\GetThmTranslation{assumption}}
+  \newtheorem{hypothesis}{\GetThmTranslation{hypothesis}}
 
-\theoremstyle{remark}
-\newtheorem*{remark}{\GetThmTranslation{remark}}
-\newtheorem*{note}{\GetThmTranslation{note}}
-\newtheorem*{notation}{\GetThmTranslation{notation}}
-\newtheorem{claim}{\GetThmTranslation{claim}}
-\newtheorem*{summary}{\GetThmTranslation{summary}}
-\newtheorem*{acknowledgement}{\GetThmTranslation{acknowledgement}}
-\newtheorem*{conclusion}{\GetThmTranslation{conclusion}}
+  \theoremstyle{remark}
+  \newtheorem*{remark}{\GetThmTranslation{remark}}
+  \newtheorem*{note}{\GetThmTranslation{note}}
+  \newtheorem*{notation}{\GetThmTranslation{notation}}
+  \newtheorem{claim}{\GetThmTranslation{claim}}
+  \newtheorem*{summary}{\GetThmTranslation{summary}}
+  \newtheorem*{acknowledgement}{\GetThmTranslation{acknowledgement}}
+  \newtheorem*{conclusion}{\GetThmTranslation{conclusion}}
 
-% Cases within proofs
-\theoremstyle{remark}
-\newtheorem{case}{\GetThmTranslation{case}}
-\addtotheorempreheadhook[proof]{\setcounter{case}{0}}
+  % Cases within proofs
+  \theoremstyle{remark}
+  \newtheorem{case}{\GetThmTranslation{case}}
+  \addtotheorempreheadhook[proof]{\setcounter{case}{0}}
 
-% Translations
-% English/Default
-\DeclareTranslationFallback{theorem}{Theorem}
-\DeclareTranslationFallback{lemma}{Lemma}
-\DeclareTranslationFallback{corollary}{Corollary}
-\DeclareTranslationFallback{proposition}{Proposition}
-\DeclareTranslationFallback{conjecture}{Conjecture}
-\DeclareTranslationFallback{criterion}{Criterion}
-\DeclareTranslationFallback{assertion}{Assertion}
+  % Translations
+  % English/Default
+  \DeclareTranslationFallback{theorem}{Theorem}
+  \DeclareTranslationFallback{lemma}{Lemma}
+  \DeclareTranslationFallback{corollary}{Corollary}
+  \DeclareTranslationFallback{proposition}{Proposition}
+  \DeclareTranslationFallback{conjecture}{Conjecture}
+  \DeclareTranslationFallback{criterion}{Criterion}
+  \DeclareTranslationFallback{assertion}{Assertion}
 
-\DeclareTranslationFallback{definition}{Definition}
-\DeclareTranslationFallback{condition}{Condition}
-\DeclareTranslationFallback{problem}{Problem}
-\DeclareTranslationFallback{example}{Example}
-\DeclareTranslationFallback{exercise}{Exercise}
-\DeclareTranslationFallback{algorithm}{Algorithm}
-\DeclareTranslationFallback{question}{Question}
-\DeclareTranslationFallback{axiom}{Axiom}
-\DeclareTranslationFallback{property}{Property}
-\DeclareTranslationFallback{assumption}{Assumption}
-\DeclareTranslationFallback{hypothesis}{Hypothesis}
+  \DeclareTranslationFallback{definition}{Definition}
+  \DeclareTranslationFallback{condition}{Condition}
+  \DeclareTranslationFallback{problem}{Problem}
+  \DeclareTranslationFallback{example}{Example}
+  \DeclareTranslationFallback{exercise}{Exercise}
+  \DeclareTranslationFallback{algorithm}{Algorithm}
+  \DeclareTranslationFallback{question}{Question}
+  \DeclareTranslationFallback{axiom}{Axiom}
+  \DeclareTranslationFallback{property}{Property}
+  \DeclareTranslationFallback{assumption}{Assumption}
+  \DeclareTranslationFallback{hypothesis}{Hypothesis}
 
-\DeclareTranslationFallback{remark}{Remark}
-\DeclareTranslationFallback{note}{Note}
-\DeclareTranslationFallback{notation}{Notation}
-\DeclareTranslationFallback{claim}{Claim}
-\DeclareTranslationFallback{summary}{Summary}
-\DeclareTranslationFallback{acknowledgement}{Acknowledgement}
-\DeclareTranslationFallback{conclusion}{Conclusion}
+  \DeclareTranslationFallback{remark}{Remark}
+  \DeclareTranslationFallback{note}{Note}
+  \DeclareTranslationFallback{notation}{Notation}
+  \DeclareTranslationFallback{claim}{Claim}
+  \DeclareTranslationFallback{summary}{Summary}
+  \DeclareTranslationFallback{acknowledgement}{Acknowledgement}
+  \DeclareTranslationFallback{conclusion}{Conclusion}
 
-\DeclareTranslationFallback{case}{Case}
+  \DeclareTranslationFallback{case}{Case}
 
-% Dutch
-\DeclareTranslation{Dutch}{theorem}{Stelling}
-\DeclareTranslation{Dutch}{lemma}{Lemma}
-\DeclareTranslation{Dutch}{corollary}{Gevolg}
-\DeclareTranslation{Dutch}{proposition}{Propositie}
-\DeclareTranslation{Dutch}{conjecture}{Vermoeden}
-\DeclareTranslation{Dutch}{criterion}{Criterium}
-\DeclareTranslation{Dutch}{assertion}{Vereiste}
+  % Dutch
+  \DeclareTranslation{Dutch}{theorem}{Stelling}
+  \DeclareTranslation{Dutch}{lemma}{Lemma}
+  \DeclareTranslation{Dutch}{corollary}{Gevolg}
+  \DeclareTranslation{Dutch}{proposition}{Propositie}
+  \DeclareTranslation{Dutch}{conjecture}{Vermoeden}
+  \DeclareTranslation{Dutch}{criterion}{Criterium}
+  \DeclareTranslation{Dutch}{assertion}{Vereiste}
 
-\DeclareTranslation{Dutch}{definition}{Definitie}
-\DeclareTranslation{Dutch}{condition}{Conditie}
-\DeclareTranslation{Dutch}{problem}{Probleem}
-\DeclareTranslation{Dutch}{example}{Voorbeeld}
-\DeclareTranslation{Dutch}{exercise}{Oefening}
-\DeclareTranslation{Dutch}{algorithm}{Algoritme}
-\DeclareTranslation{Dutch}{question}{Vraag}
-\DeclareTranslation{Dutch}{axiom}{Axioma}
-\DeclareTranslation{Dutch}{property}{Eigenschap}
-\DeclareTranslation{Dutch}{assumption}{Veronderstelling}
-\DeclareTranslation{Dutch}{hypothesis}{Hypothese}
+  \DeclareTranslation{Dutch}{definition}{Definitie}
+  \DeclareTranslation{Dutch}{condition}{Conditie}
+  \DeclareTranslation{Dutch}{problem}{Probleem}
+  \DeclareTranslation{Dutch}{example}{Voorbeeld}
+  \DeclareTranslation{Dutch}{exercise}{Oefening}
+  \DeclareTranslation{Dutch}{algorithm}{Algoritme}
+  \DeclareTranslation{Dutch}{question}{Vraag}
+  \DeclareTranslation{Dutch}{axiom}{Axioma}
+  \DeclareTranslation{Dutch}{property}{Eigenschap}
+  \DeclareTranslation{Dutch}{assumption}{Veronderstelling}
+  \DeclareTranslation{Dutch}{hypothesis}{Hypothese}
 
-\DeclareTranslation{Dutch}{remark}{Opmerking}
-\DeclareTranslation{Dutch}{note}{Merk op}
-\DeclareTranslation{Dutch}{notation}{Notatie}
-\DeclareTranslation{Dutch}{claim}{Bewering}
-\DeclareTranslation{Dutch}{summary}{Samenvatting}
-\DeclareTranslation{Dutch}{acknowledgement}{Erkenning}
-\DeclareTranslation{Dutch}{conclusion}{Conclusie}
+  \DeclareTranslation{Dutch}{remark}{Opmerking}
+  \DeclareTranslation{Dutch}{note}{Merk op}
+  \DeclareTranslation{Dutch}{notation}{Notatie}
+  \DeclareTranslation{Dutch}{claim}{Bewering}
+  \DeclareTranslation{Dutch}{summary}{Samenvatting}
+  \DeclareTranslation{Dutch}{acknowledgement}{Erkenning}
+  \DeclareTranslation{Dutch}{conclusion}{Conclusie}
 
-\DeclareTranslation{Dutch}{case}{Geval}
+  \DeclareTranslation{Dutch}{case}{Geval}
+\fi

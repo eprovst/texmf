@@ -8,7 +8,11 @@
 % Basic things
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
-\RequirePackage[hidelinks]{hyperref}
+\@ifpackageloaded{hyperref}{
+  % Don't do anything
+}{
+  \RequirePackage[hidelinks]{hyperref}
+}
 \RequirePackage{microtype}
 
 % Use my maths collection
