@@ -1,0 +1,23 @@
+%%%%%%%%%%%%%%%
+% Import Arev %
+%%%%%%%%%%%%%%%
+
+\RequirePackage{arev}
+\RequirePackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%
+% Support siunitx %
+%%%%%%%%%%%%%%%%%%%
+
+% Arev misses a micro symbol so we use the one from Helvetica instead:
+\renewcommand{\textmu}{\usefont{TS1}{phv}{m}{n}\text{\char'265}}
+
+% Ohm is also wrong:
+\renewcommand{\textohm}{\ensuremath{\Omega}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tell Beamer to keep maths intact %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\beamer@suppressreplacementstrue

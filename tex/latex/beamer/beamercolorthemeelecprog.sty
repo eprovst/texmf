@@ -2,68 +2,60 @@
 % Custom colors %
 %%%%%%%%%%%%%%%%%
 
-\definecolor{epwhite}{RGB}{236,236,236}
-\definecolor{epgray}{RGB}{128,128,128}
-\definecolor{epblack}{RGB}{16,16,16}
+\definecolor{ep-white}{HTML}{FFFFFF}
+\definecolor{ep-black}{HTML}{000000}
 
-\definecolor{epred}{RGB}{255,102,115}
-\definecolor{epgreen}{RGB}{102,255,138}
-\definecolor{epblue}{RGB}{142,158,255}
-\definecolor{eporange}{RGB}{255,222,115}
+\definecolor{ep-gray-dark}{HTML}{263238}
+\definecolor{ep-gray-darker}{HTML}{37474F}
+\definecolor{ep-gray}{HTML}{455A64}
+\definecolor{ep-gray-light}{HTML}{B0BEC5}
 
-\colorlet{epfg}{epblack}
-\colorlet{epbg}{epwhite}
-\colorlet{epaccent}{epgray}
+\definecolor{ep-alert}{HTML}{D50000}
 
-\DeclareOptionBeamer{inverted}{%
-  \colorlet{epfg}{epwhite}
-  \colorlet{epbg}{epblack}
-  \colorlet{epaccent}{epgray}
-}
-\ProcessOptionsBeamer
+\definecolor{ep-red}{HTML}{D32F2F}
+\definecolor{ep-red-light}{HTML}{EF9A9A}
+
+\definecolor{ep-green}{HTML}{00796B}
+\definecolor{ep-green-light}{HTML}{80CBC4}
 
 
 %%%%%%%%%
 % Basic %
 %%%%%%%%%
 
-\setbeamercolor*{normal text}{fg=epfg,bg=epbg}
-\setbeamercolor*{alerted text}{fg=epred,bg=epbg}
-\setbeamerfont{alerted text}{series=\bfseries}
+\setbeamercolor*{normal text}{fg=ep-black, bg=ep-white}
+\setbeamercolor*{alerted text}{fg=ep-alert, bg=ep-white}
 
 
 %%%%%%%%%%%
 % Palette %
 %%%%%%%%%%%
 
-\setbeamercolor*{palette primary}{fg=epfg,bg=epbg}
-\setbeamercolor*{palette secondary}{fg=epfg,bg=epbg}
-\setbeamercolor*{palette tertiary}{fg=epbg,bg=epfg}
-\setbeamercolor*{palette quaternary}{fg=epfg,bg=epbg}
+\setbeamercolor*{palette primary}{fg=ep-black, bg=ep-white}
+\setbeamercolor*{palette secondary}{fg=ep-black, bg=ep-white}
+\setbeamercolor*{palette tertiary}{fg=ep-white, bg=ep-black}
+\setbeamercolor*{palette quaternary}{fg=ep-black, bg=ep-white}
 
 
 %%%%%%%%%%%%%
 % Structure %
 %%%%%%%%%%%%%
 
-\setbeamercolor{structure}{fg=epaccent}
-\setbeamercolor{item}{fg=epfg}
-\setbeamercolor{page number in head/foot}{fg=epaccent}
-\setbeamercolor{frametitle}{fg=epfg}
+\setbeamercolor{structure}{fg=ep-gray-dark}
+\setbeamercolor{item}{fg=ep-black}
+\setbeamercolor{page number in head/foot}{fg=ep-gray-dark}
+\setbeamercolor{frametitle}{fg=ep-black}
 
 
 %%%%%%%%%
 % Block %
 %%%%%%%%%
 
-\setbeamerfont{block title}{series=\mdseries}
-\setbeamercolor{block title}{fg=epbg, bg=epgray!75!epfg}
-\setbeamercolor{block body}{fg=epfg, bg=epgray!45!epbg}
+\setbeamercolor{block title}{fg=ep-white, bg=ep-gray}
+\setbeamercolor{block body}{fg=ep-black, bg=ep-gray-light}
 
-\setbeamerfont{block title alerted}{series=\mdseries}
-\setbeamercolor{block title alerted}{fg=epbg, bg=epred!75!epfg}
-\setbeamercolor{block body alerted}{fg=epfg, bg=epred!45!epbg}
+\setbeamercolor{block title alerted}{fg=ep-white, bg=ep-red}
+\setbeamercolor{block body alerted}{fg=ep-black, bg=ep-red-light}
 
-\setbeamerfont{block title example}{series=\mdseries}
-\setbeamercolor{block title example}{fg=epbg, bg=epgreen!75!epfg}
-\setbeamercolor{block body example}{fg=epfg, bg=epgreen!45!epbg}
+\setbeamercolor{block title example}{fg=ep-white, bg=ep-green}
+\setbeamercolor{block body example}{fg=ep-black, bg=ep-green-light}

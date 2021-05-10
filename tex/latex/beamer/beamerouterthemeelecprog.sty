@@ -6,13 +6,11 @@
 \beamertemplatenavigationsymbolsempty
 
 % Footer
-\setbeamertemplate{footline} {%
-  \begin{beamercolorbox}[wd=\beamer@paperwidth,ht=2em]{background}
-  \end{beamercolorbox}
-}
+\setbeamertemplate{footline} {}
 
 \DeclareOptionBeamer{number} {
   \setbeamertemplate{footline} {%
+    \setlength{\parskip}{0pt}%
     \begin{beamercolorbox}[wd=\beamer@paperwidth,ht=2em]{footline}
       \hfill%
       \usebeamercolor[fg]{page number in head/foot}%
@@ -24,12 +22,12 @@
 \ProcessOptionsBeamer
 
 % Frame title
-\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
 
 \setbeamertemplate{frametitle} {%
-  \vspace*{-3pt}% HACK
-  \begin{beamercolorbox}[wd=\beamer@paperwidth,ht=2em]{frametitle}
-    \vspace{.5em}%
-    {\hspace{.5em}\usebeamerfont{frametitle}\insertframetitle}
+  \setlength{\parskip}{0pt}%
+  \begin{beamercolorbox}[wd=\beamer@paperwidth]{frametitle}
+    \usebeamerfont{frametitle}%
+    \hspace{.2cm}\insertframetitle\par%
   \end{beamercolorbox}%
 }

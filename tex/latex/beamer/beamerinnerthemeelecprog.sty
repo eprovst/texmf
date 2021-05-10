@@ -3,13 +3,16 @@
 %%%%%%%%%
 
 % Add space between paragraphs
-\setlength{\parskip}{3ex minus 3ex}
+\RequirePackage{etoolbox}
+
+\setlength{\parskip}{2ex minus 2ex}
+\newcommand{\@minipagerestore}{\setlength{\parskip}{2ex minus 2ex}}
 
 % Itemize
 \RequirePackage{enumitem}
 
-\setlist[1]{itemsep=\parskip}
-\setlist{itemsep={0.5ex minus 0.5ex}}
+\setlist{topsep={-\parskip + (1ex minus 1ex)},
+         itemsep={0.5ex minus 0.5ex}}
 
 \newcommand{\nicebullet}{\raise1.25pt\hbox{\donotcoloroutermaths$\bullet$}}
 \setlist[itemize]{label=\nicebullet}
@@ -30,7 +33,8 @@
 
 \setbeamertemplate{title page} {%
   \begin{minipage}[b][\beamer@paperheight]{\textwidth}%
-    \raggedright{}
+    \setlength{\parskip}{0pt}%
+    \raggedright{}%
     {\usebeamerfont{title page title}\usebeamercolor[fg]{title page}\inserttitle\par}%
     \vspace{-.2ex}
     \rule{\widthof{\insertauthor} * \real{1.6}}{1pt}\par
@@ -38,4 +42,18 @@
     {\usebeamerfont{title page institute}\usebeamercolor[fg]{title page}\insertinstitute\par}%
     \vspace{\beamer@leftmargin}%
   \end{minipage}%
+}
+
+% Section page
+\AtBeginSection{%
+  \begin{frame}
+    \begin{minipage}[b][\beamer@paperheight]{\textwidth}%
+      \setlength{\parskip}{0pt}%
+      \raggedright{}%
+      {\Large \bfseries \insertsection\par}%
+      \vspace{-.2ex}%
+      \rule{\widthof{\Large \bfseries \insertsection} / \real{1.6}}{1pt}\par
+      \vspace{3\beamer@leftmargin}%
+    \end{minipage}%
+  \end{frame}%
 }
